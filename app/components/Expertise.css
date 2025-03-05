@@ -1,0 +1,179 @@
+/* Backup this file before modifications */
+.expertise {
+    padding: 60px 15px;
+    background-color: #f8f9fa;
+}
+
+.expertise__content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.expertise__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.expertise__header h2 {
+    font-family: 'Geist', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.expertise__logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Base logo wrapper styling */
+.expertise__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    transition: transform 0.2s ease;
+}
+
+/* Special spacing for Penn and LSE logos */
+.expertise__logo-wrapper--penn {
+    margin-right: 0;
+    /* Standard 15px gap from the flex container */
+}
+
+.expertise__logo-wrapper--lse {
+    margin-left: 0;
+    /* Standard 15px gap from the flex container */
+}
+
+/* Special spacing for Cambridge and Harvard logos - closer together (5px) */
+.expertise__logo-wrapper--cambridge {
+    margin-right: -5px;
+    /* Reduce the gap by 10px (15px default - 10px = 5px total) */
+    width: 130px;
+}
+
+.expertise__logo-wrapper--harvard {
+    margin-left: -5px;
+    /* Reduce the gap by 10px (15px default - 10px = 5px total) */
+    width: 130px;
+}
+
+/* Adjust logo size for Harvard and Cambridge */
+.expertise__logo-wrapper--cambridge .expertise__logo,
+.expertise__logo-wrapper--harvard .expertise__logo {
+    max-width: 120px;
+}
+
+.expertise__logo {
+    max-width: 150px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.expertise__cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.expertise__cta-button {
+    font-family: 'Geist', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+    transition: box-shadow 0.2s ease;
+}
+
+.expertise__cta-button:hover {
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .expertise__logos-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .expertise__logos-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .expertise__header h2 {
+        font-size: 1.8rem;
+    }
+
+    .expertise__logo-wrapper {
+        height: 70px;
+        margin: 0 !important;
+        /* Reset all margin adjustments on mobile */
+        width: auto !important;
+        /* Reset width constraints on mobile */
+    }
+
+    /* Maintain specific spacing for Cambridge-Harvard on mobile */
+    .expertise__logo-wrapper--cambridge {
+        margin-bottom: 0 !important;
+        /* 5px total spacing with Harvard */
+    }
+
+    .expertise__logo-wrapper--harvard {
+        margin-top: 0 !important;
+        /* 5px total spacing with Cambridge */
+    }
+
+    /* Add a special class to create a group for Cambridge and Harvard */
+    .expertise__logo-wrapper--cambridge+.expertise__logo-wrapper--harvard {
+        margin-top: 5px !important;
+        /* 5px spacing between Cambridge and Harvard */
+    }
+
+    .expertise__logo {
+        max-width: 130px;
+        max-height: 55px;
+    }
+
+    .expertise__logo-wrapper--cambridge .expertise__logo,
+    .expertise__logo-wrapper--harvard .expertise__logo {
+        max-width: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise {
+        padding: 40px 15px;
+    }
+
+    .expertise__header h2 {
+        font-size: 1.6rem;
+    }
+
+    .expertise__logo-wrapper {
+        height: 60px;
+    }
+
+    .expertise__logo {
+        max-width: 120px;
+        max-height: 50px;
+    }
+
+    .expertise__logo-wrapper--cambridge .expertise__logo,
+    .expertise__logo-wrapper--harvard .expertise__logo {
+        max-width: 100px;
+    }
+}

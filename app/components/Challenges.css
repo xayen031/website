@@ -1,0 +1,314 @@
+/* <!-- Minify this CSS module before deployment --> */
+/* <!-- Test responsiveness at 375px, 768px, 1024px --> */
+
+.challenges {
+    padding: 60px 20px;
+    background-color: white;
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.challenges__content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.challenges__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.challenges__header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4B5563;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.challenges__header p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #6B7280;
+    max-width: 600px;
+    margin: 0 auto 5px;
+    line-height: 1.4;
+}
+
+.challenges__trust {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.challenges__trust-badge {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #6B7280;
+    position: relative;
+    cursor: help;
+    background-color: rgba(59, 130, 246, 0.05);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.challenges__trust-badge::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4B5563;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 5px;
+}
+
+.challenges__trust-badge:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.challenges__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.challenges__card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E5E7EB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.challenges__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.challenges__card-content {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.challenges__card-icon {
+    width: 45px;
+    height: 45px;
+    color: #3B82F6;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
+}
+
+.challenges__card-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #4B5563;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.challenges__benefit {
+    color: #6B7280;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+    min-height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.challenges__benefit span {
+    font-weight: 600;
+    color: #3B82F6;
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.challenges__subtext {
+    color: #6B7280;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+    background-color: rgba(59, 130, 246, 0.05);
+    border-radius: 4px;
+}
+
+.challenges__underline {
+    height: 2px;
+    background-color: rgba(59, 130, 246, 0.3);
+    margin: 0 auto;
+    width: 80%;
+    margin-top: auto;
+}
+
+.challenges__cta-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.challenges__cta-button {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0, 123, 255, 0.3);
+}
+
+.challenges__cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .challenges__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .challenges__header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .challenges {
+        padding: 50px 16px;
+    }
+
+    .challenges__header h2 {
+        font-size: 1.8rem;
+    }
+
+    .challenges__header p {
+        font-size: 1rem;
+    }
+
+    .challenges__grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .challenges__card {
+        margin-bottom: 15px;
+    }
+
+    .challenges__card-content {
+        padding: 25px 15px;
+    }
+
+    .challenges__card-content h3 {
+        font-size: 1.5rem;
+        min-height: auto;
+        margin-bottom: 12px;
+    }
+
+    .challenges__benefit {
+        font-size: 1.1rem;
+        min-height: auto;
+        padding: 0 10px;
+        margin-bottom: 12px;
+    }
+
+    .challenges__benefit span {
+        margin-top: 6px;
+        font-size: 0.95rem;
+    }
+
+    .challenges__subtext {
+        font-size: 0.85rem;
+        min-height: auto;
+        margin-bottom: 15px;
+        padding: 5px 10px;
+    }
+
+    .challenges__card-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .challenges__cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .challenges__header h2 {
+        font-size: 1.6rem;
+    }
+
+    .challenges__header p {
+        font-size: 0.9rem;
+    }
+
+    .challenges__card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .challenges__benefit {
+        font-size: 1rem;
+    }
+
+    .challenges__subtext {
+        font-size: 0.8rem;
+    }
+
+    .challenges__card-content {
+        padding: 15px 10px;
+    }
+
+    .challenges__cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
