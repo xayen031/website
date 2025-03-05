@@ -1,15 +1,21 @@
 import Hero from './components/Hero';
-import ProblemSolution from './components/ProblemSolution';
+import Challenges from './components/Challenges';
 import Testimonials from './components/Testimonials';
-import ContactCTA from './components/ContactCTA';
+import Results from './components/Results';
+import Expertise from './components/Expertise';
+import ContactSection from './components/ContactSection';
+import LanguageSwitch from './components/LanguageSwitch';
 
 export default function Home() {
   return (
     <main>
+      <LanguageSwitch />
       <Hero />
-      <ProblemSolution />
+      <Challenges />
       <Testimonials />
-      <ContactCTA />
+      <Results />
+      <Expertise />
+      <ContactSection />
     </main>
   );
 }

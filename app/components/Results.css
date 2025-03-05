@@ -1,0 +1,336 @@
+/* Backup this file before modifications */
+.results {
+    padding: 80px 20px;
+    background-color: #E6F0FA;
+}
+
+.results__content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.results__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.results__header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6c757d;
+    margin-bottom: 16px;
+    font-family: 'Geist', sans-serif;
+}
+
+.results__header p {
+    font-size: 1.1rem;
+    color: #6B7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-style: italic;
+    font-family: 'Geist', sans-serif;
+}
+
+.results__grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.results__chart-wrapper {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    min-height: 250px;
+}
+
+.results__chart-wrapper--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    text-align: center;
+}
+
+.results__chart-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.results__chart-wrapper h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.results__chart-container {
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+/* Progress Bar Styles */
+.results__progress-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.results__progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.results__progress-before,
+.results__progress-after {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results__progress-before span,
+.results__progress-after span {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.results__progress-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4B5563;
+}
+
+.results__progress-value--highlight {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.results__progress-track {
+    width: 100%;
+    height: 16px;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.results__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    border-radius: 8px;
+    width: 0%;
+}
+
+.results__progress-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.results__progress-saving {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results__progress-saving-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #007BFF;
+}
+
+.results__progress-saving-text {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Gradient text for BidMaster AI label */
+.results__bidmaster-label {
+    background: linear-gradient(90deg, #3B82F6, #60A5FA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Geist', sans-serif;
+}
+
+/* Text-only ROI styles */
+.results__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.results__roi-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.results__roi-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.results__roi-description {
+    font-size: 16px;
+    color: #64748b;
+    text-align: center;
+    max-width: 250px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Chart.js tooltip customization */
+.results__custom-tooltip {
+    background-color: #1E293B;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results__chart-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+}
+
+.results__chart-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #E5E7EB;
+    border-radius: 50%;
+    border-top-color: #3B82F6;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .results__grid {
+        max-width: 900px;
+    }
+
+    .results__chart-wrapper {
+        padding: 20px;
+    }
+
+    .results__chart-container {
+        height: 140px;
+    }
+
+    .results__progress-container {
+        height: 140px;
+    }
+
+    .results__roi-value {
+        font-size: 26px;
+    }
+
+    .results__chart-loading {
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .results {
+        padding: 60px 20px;
+    }
+
+    .results__header h2 {
+        font-size: 1.75rem;
+    }
+
+    .results__header p {
+        font-size: 1rem;
+    }
+
+    .results__grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .results__chart-wrapper {
+        width: 100%;
+        padding: 20px;
+        min-height: 220px;
+    }
+
+    .results__chart-container {
+        height: 130px;
+    }
+
+    .results__progress-container {
+        height: 130px;
+    }
+
+    .results__progress-value {
+        font-size: 1.1rem;
+    }
+
+    .results__progress-saving-value {
+        font-size: 1.1rem;
+    }
+
+    .results__chart-loading {
+        height: 130px;
+    }
+
+    .results__roi-value {
+        font-size: 24px;
+    }
+
+    .results__roi-description {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .results__chart-wrapper {
+        transition: none;
+    }
+
+    .results__chart-wrapper:hover {
+        transform: none;
+    }
+}
